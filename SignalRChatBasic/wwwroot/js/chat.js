@@ -26,6 +26,8 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         connection.invoke("SendMessage", user, message).catch(function (err) {
             return console.error(err.toString());
         });
+    } else {
+        $.notify("Please, enter username and message.", "error")
     }
     event.preventDefault();
 });
